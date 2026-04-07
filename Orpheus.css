@@ -1,0 +1,78 @@
+* {box-sizing: border-box}
+.container {
+  padding: 16px;
+}
+
+.formerror {
+    color: #ff4d4d;
+    font-size: 16px;
+    display: block;
+    margin-top: -25px; 
+    margin-bottom: 15px; 
+    background: #363333;
+    padding: 5px 10px;
+    width: fit-content;
+    line-height: 1.3;
+    position: relative;
+}
+
+.formerror:empty {
+    display: none;
+}
+
+.formerror:before{
+  content: '';  
+  width: 0;  
+  height: 0;  
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #363333;
+  position: absolute;  
+  top: -10px; 
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+.registerbtn {
+  background-color: #e97c00;
+  color: rgb(255, 255, 255);
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.registerbtn:hover {
+  opacity:1;
+}
+a {
+  color: dodgerblue;
+}
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 26px;
+}
