@@ -47,7 +47,7 @@ hr {
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
 }
-.registerbtn {
+.butt {
   background-color: #e97c00;
   color: rgb(255, 255, 255);
   padding: 16px 20px;
@@ -57,13 +57,13 @@ hr {
   width: 100%;
   opacity: 0.9;
 }
-.registerbtn:hover {
+.butt:hover {
   opacity:1;
 }
 a {
   color: dodgerblue;
 }
-.signin {
+.sign {
   background-color: #f1f1f1;
   text-align: center;
 }

@@ -1,3 +1,9 @@
+function showpage(name){
+    document.getElementById('regi').style.display = 'none';
+    document.getElementById('logi').style.display = 'none';
+    document.getElementById(name).style.display = 'block';
+}
+
 function seterror(id, error){
     element = document.getElementById(id);
     element.getElementsByClassName('formerror')[0].innerHTML = error;
@@ -6,10 +12,10 @@ function seterror(id, error){
 function validateForm(){
     var returnval=true;
     var nick = document.forms["reg"]["username"].value;
-    if(nick.length < 4){
+    if (nick.length < 4){
         seterror("nick", "Мало буковок чувак, 4 или больше надо");
         returnval = false;
-
+    }
     var pass = document.forms["reg"]["psw"].value;
     if (pass.length < 4){
         seterror("pass", "Короткий пароль, аккаунт спиздят быстро");
@@ -27,7 +33,20 @@ function validateForm(){
         seterror("pass2", "Пароли не совпадают, нельзя так чувак");
         returnval = false;
     }
-    
-    }
     return returnval;
+}
+
+function validateLogin(){
+    var returnval = true;
+    var nick = document.forms["log"]["username"].value;
+    if(nick.length < 4){
+        seterror("log-nick", "Ты же блять делал аккаунт, 4 или больше буковок надо");
+        returnval = false;
+    }
+    var pass = document.forms["log"]["psw"].value;
+    if(pass.length < 4){
+        seterror("log-pass", "Имбецил, пароль короткий у тебя, 4 или больше символов надо");
+        returnval = false;
+    }
+return returnval;
 }

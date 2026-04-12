@@ -7,42 +7,65 @@
     <title>Document</title>
 </head>
 <body>
-    <form name="reg" onsubmit="return validateForm()">
-    <div class="container">
-        <h1>Здравствуй дорогой автолюбитель!</h1>
-        <p>Зарегистрируйся ниже раз зашёл</p>
-
-        <hr>
-        <div id="nick" class="formstyle">
-            <label for="username"><b>Никнейм</b></label>
-            <input type="text" placeholder="Введи никнейм пожалуйста" 
-            name="username" id="username" required>
-            <b><span class="formerror"></span></b>
+    <div id="regi">
+        <form name="reg" onsubmit="return validateForm()">
+        <div class="container">
+            <h1>Здравствуй дорогой автолюбитель!</h1>
+            <p>Зарегистрируйся ниже раз зашёл</p>
+            <hr>
+            <div id="nick" class="formstyle">
+                <label for="username"><b>Никнейм</b></label>
+                <input type="text" placeholder="Введи никнейм пожалуйста"
+                name="username" id="username" required>
+                <b><span class="formerror"></span></b>
+            </div>
+            <div id="pass" class="formstyle">
+                <label for="psw"><b>Пароль</b></label>
+                <input type="password" placeholder="Введи пароль пожалуйста" name="psw"
+                id="psw" required>
+                <b><span class="formerror"></span></b>
+            </div>
+            <div id="pass2" class="formstyle">
+                <label for="psw-repeat"><b>Повтори пароль</b></label>
+                <input type="password" placeholder="Пароль нужно повторить" name="psw2"
+                id="psw2" required>
+                <b><span class="formerror"></span></b>
+            </div>
+            <hr>
+            <p>Регистрируясь здесь, ты соглашаешься отдать душу Оптимусу Прайму</p>
+            <button type="submit" class="butt">Зарегистрироваться</button>
+            </div>
+            <div class="container sign">
+            <p>Уже есть аккаунт? <a href="#" onclick="showpage('logi')">Войди в него</a></p>
+            </div>
+        </form>
+    </div>
+    <div id="logi" style="display:none">
+        <form name="log" onsubmit="return validateLogin()">
+        <div class="container">
+            <h1>Здравствуй бывалый автолюбитель!</h1>
+            <p>Тебе стоит войти в аккаунт</p>
+            <hr>
+            <div id="log-nick" class="formstyle">
+                <label for="username"><b>Никнейм</b></label>
+                <input type="text" placeholder="Введи никнейм пожалуйста"
+                name="username" id="username" required>
+                <b><span class="formerror"></span></b>
+            </div>
+            <div id="log-pass" class="formstyle">
+                <label for="psw"><b>Пароль</b></label>
+                <input type="password" placeholder="Введи пароль пожалуйста" name="psw"
+                id="psw" required>
+                <b><span class="formerror"></span></b>
+            </div>
+            <hr>
+            <button type="submit" class="butt">Войти</button>
+            <div class="container sign">
+            <p>У тебя аккаунта нет? <a href="#" onclick="showpage('regi')">Создай его</a></p>
+            </div>
         </div>
-
-        <div id="pass" class="formstyle">
-            <label for="psw"><b>Пароль</b></label>
-            <input type="password" placeholder="Введи пароль пожалуйста" name="psw" 
-            id="psw" required>
-            <b><span class="formerror"></span></b>
-        </div>
-
-        <div id="pass2" class="formstyle">
-            <label for="psw-repeat"><b>Повтори пароль</b></label>
-            <input type="password" placeholder="Пароль нужно повторить" name="psw2" 
-            id="psw2" required>
-            <b><span class="formerror"></span></b>
-        </div>
-        <hr>
-
-        <p>Регистрируясь здесь, ты соглашаешься отдать душу Оптимусу Прайму</p>
-        <button type="submit" class="registerbtn">Зарегистрироваться</button>
-        </div>
-
-        <div class="container signin">
-        <p>Уже есть аккаунт? <a href="#">Войди в него</a>.</p>
-        </div>
-    </form>
+        </form>
+    </div>
     <script src="Izanagi.js"></script>
 </body>
 </html>
