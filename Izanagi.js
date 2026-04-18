@@ -33,6 +33,20 @@ function validateForm(){
         seterror("pass2", "Пароли не совпадают, нельзя так чувак");
         returnval = false;
     }
+
+    if(returnval){
+        fetch('http/localhost:5000/registration', {
+            method: 'POST',
+            headers: {'Content-type': 'application/json'},
+            body: JSON.stringify({
+                username: nick,
+                password: pass
+            })
+        })
+        .then(res => res.json())
+        .then(data => console.log(data))
+    }
+
     return returnval;
 }
 
@@ -48,5 +62,19 @@ function validateLogin(){
         seterror("log-pass", "Имбецил, пароль короткий у тебя, 4 или больше символов надо");
         returnval = false;
     }
+
+    if(returnval){
+        fetch('http/localhost:5000/login', {
+            method: 'POST',
+            headers: {'Content-type': 'application/json'},
+            body: JSON.stringify({
+                username: nick,
+                password: pass
+            })
+        })
+        .then(res => res.json())
+        .then(data => console.log(data))
+    }
+
 return returnval;
 }
