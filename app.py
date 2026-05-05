@@ -1,33 +1,35 @@
-from flask import Flask
-from flask import render_template
-from flask import request
+from flask import Flask, request, render_template, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
+
+users={}
+
 @app.route('/')
 def index():
     return render_template('Thanatos.html', name='Fabel')
-@app.route('/courses')
-def courses():
-    return 'это твои курсы'
-@app.route('/hello', methods=['POST'])
-def hello():
-    name = request.form['name']
-    return f'Привет, {name}!'
-@app.route('/login', methods=['POST'])
-def login():
-    username = request.form['username']
-    password = request.form['password']
-    if username == 'admin' and psw == '1234':
-        return f'вы вошли'
-    else:
-        return f'не правильный логин или пароль, повторите попытку'
+
 @app.route('/registration', methods=['POST'])
 def registration():
     username = request.json.get('username')
     password = request.json.get('password')
     if not username or not password:
         return {"status": "Неправильный логин или пароль"}
-    else:
-        return {"status": "Заходь"}
+    if username in users:
+        return jsonify({'error': 'Пользователь уже существует'})
+    users[username] = password
+    return jsonify({'status': 'ok'})
+
+@app.route('/login', methods=['POST'])
+def login():
+    username = request.form['username']
+    password = request.form['password']
+    if username not in users:
+        return jsonify({'error': 'Такого пользователя нет'})
+    if users[username] != password:
+        return jsonify({'error': 'Неверный пароль'})
+    return jsonify({'status': 'ok'})
+
 if __name__ == '__main__':
     app.run(debug=True)
