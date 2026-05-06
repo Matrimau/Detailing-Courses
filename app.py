@@ -10,25 +10,29 @@ users={}
 def index():
     return render_template('Thanatos.html', name='Fabel')
 
+
 @app.route('/registration', methods=['POST'])
 def registration():
     username = request.json.get('username')
     password = request.json.get('password')
     if not username or not password:
-        return {"status": "Неправильный логин или пароль"}
+        return jsonify({'error': 'всё заполни!'})
     if username in users:
-        return jsonify({'error': 'Пользователь уже существует'})
+        return jsonify({'error': 'ты уже существуешь'})
     users[username] = password
     return jsonify({'status': 'ok'})
 
+
 @app.route('/login', methods=['POST'])
 def login():
-    username = request.form['username']
-    password = request.form['password']
+    username = request.json.get('username')
+    password = request.json.get('password')
+    if not username or not password:
+        return jsonify({'error': 'всё заполни!'})
     if username not in users:
-        return jsonify({'error': 'Такого пользователя нет'})
+        return jsonify({'error': 'ты не родился ещё'})
     if users[username] != password:
-        return jsonify({'error': 'Неверный пароль'})
+        return jsonify({'error': 'а пароль то у нас неверный'})
     return jsonify({'status': 'ok'})
 
 if __name__ == '__main__':
