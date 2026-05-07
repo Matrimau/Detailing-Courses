@@ -6,11 +6,6 @@ CORS(app)
 
 users={}
 
-@app.route('/')
-def index():
-    return render_template('Thanatos.html', name='Fabel')
-
-
 @app.route('/registration', methods=['POST'])
 def registration():
     username = request.json.get('username')
