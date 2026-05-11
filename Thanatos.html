@@ -49,13 +49,13 @@
             <div id="log-nick" class="formstyle">
                 <label for="username"><b>Никнейм</b></label>
                 <input type="text" placeholder="Введи никнейм пожалуйста"
-                name="username" id="username" required>
+                name="username" id="log-username" required>
                 <b><span class="formerror"></span></b>
             </div>
             <div id="log-pass" class="formstyle">
                 <label for="psw"><b>Пароль</b></label>
                 <input type="password" placeholder="Введи пароль пожалуйста" name="psw"
-                id="psw" required>
+                id="log-psw" required>
                 <b><span class="formerror"></span></b>
             </div>
             <hr>
@@ -66,6 +66,37 @@
         </div>
         </form>
     </div>
-    <script src="../static/js/Izanagi.js"></script>
+    <div id="home" class="home" style="display: none">
+        <h1 class="greet">Здравствуй <span id="Nickna"></span>!</h1>
+        <button class="descript" onclick="showpage('about')">Описание веб-приложения</button>
+        <h1>Хочешь почитать описание веб-приложения? Жми кнопочку</h1>
+    </div>
+    <div id="about" class="about" style="display: none;">
+        <h1>Здарова челик! Описание веб-приложения захотел почитать? </h1>
+        <article class="board">
+            <p class="opisan">
+                Данное веб-приложение на которое ты зашёл(спасибо что зашёл кстати) предлагает
+                людям, от чайника до помешанного шиза, самостоятельно почитать курс по детейлигу.
+            </p>
+            <p class="opisan2">
+                Для каждого человека будет предоставлен курс который подойдёт ему по сложности.
+                Условно, чайник получит упрощённый курс чтобы он смого спокойно всё прочесть и 
+                в последствии не испугаться.
+
+                А вот уже шиз получит курс набитый настоящим хардкором и тоннами матершины
+                (крайне не советую выбирать этот вариант если ты новичок или немного бывалый, я серьёзно)
+            </p>
+
+            <p class="opisan3">
+                Курсы в данном веб-приложении полностью бесплатные, а главное доступные для каждого челика
+                или челикессы.
+            </p>
+            <p class="opisan4">
+                Желаю вам всем хорошего чтения и крепких нервов 
+                <img src="front_images/chelik.jpg" class="icon"></img>
+            </p>
+        </article>
+    </div>
+    <script src="Izanagi.js"></script>
 </body>
 </html>
