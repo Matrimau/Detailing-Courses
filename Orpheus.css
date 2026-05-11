@@ -3,6 +3,81 @@
   padding: 16px;
 }
 
+.icon {
+  width: 75px;
+  height: 75px;
+  vertical-align: middle;
+}
+
+.board {
+  background: #e2dfdf;
+  height: 800px;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-wrap: break-word;
+}
+
+.opisan {
+  font-size: 22px;
+  text-align: left;
+  margin-left: 7px;
+}
+.opisan2 {
+  font-size: 22px;
+  text-align: left;
+  margin-left: 7px;
+}
+.opisan3 {
+  font-size: 22px;
+  text-align: left;
+  margin-left: 7px;
+}
+.opisan4 {
+  font-size: 22px;
+  text-align: left;
+  margin-left: 7px;
+}
+
+.about {
+  background-image: url(front_images/grey_bricks.jpg);
+  background-size: auto;
+  background-repeat: repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+.about h1 {
+  color: aquamarine;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  padding-top: 20px;
+  -webkit-text-stroke: 1px rgb(152, 102, 233);
+}
+
+.greet {
+  color: #d3c3c3;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.home h1 {
+    margin: 0;
+    padding-top: 20px;
+}
+
+.home {
+  background-image: url(front_images/brickwall.jpg);
+  background-size: auto;
+  background-repeat: repeat;
+  width: 100%;
+  height: 150vh;
+}
+
 .formerror {
     color: #ff4d4d;
     font-size: 16px;
