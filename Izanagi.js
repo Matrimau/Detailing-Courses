@@ -36,11 +36,6 @@ function validateForm(){
         returnval = false;
     }
 
-    /*if(returnval){
-        document.getElementById('Nickna').innerHTML = nick;
-        showpage('home')
-    }*/
-
     if(returnval){
         fetch('http://26.96.157.124:5000/registration', {
             method: 'POST',
@@ -81,11 +76,6 @@ function validateLogin(){
         seterror("log-pass", "У тебя пароль короткий, от 4 символов");
         returnval = false;
     }
-
-    /*if(returnval){
-        document.getElementById('Nickna').innerHTML = nick;
-        showpage('home')
-    }*/
     
     if(returnval){
         fetch('http://26.96.157.124:5000/login', {
