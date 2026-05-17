@@ -3,6 +3,117 @@
   padding: 16px;
 }
 
+.buttones {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 300px;
+  margin-top: 50px;
+}
+
+.Hardcore {
+  width: 300px;
+  height: 300px;
+  background-image: url('front_images/HolyShit.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  margin-top: 150px;
+}
+.Hardcore:hover {
+  box-shadow: 0 0 15px 5px rgb(255, 5, 5);
+}
+
+.Normal {
+  width: 300px;
+  height: 300px;
+  background-image: url('front_images/Normal.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  margin-top: 150px;
+}
+.Normal:hover {
+  box-shadow: 0 0 15px 5px rgb(253, 223, 52);
+}
+
+.Chill {
+  width: 300px;
+  height: 300px;
+  background-image: url('front_images/Chill.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  margin-top: 150px;
+}
+.Chill:hover {
+  box-shadow: 0 0 15px 5px rgba(6, 180, 6, 0.842);
+}
+
+.home .descript {
+  width: 120px;
+  height: 160px;
+  display: block;
+  margin-left: auto;
+  margin-right: 200px;
+  cursor: pointer;
+  background-image: url('front_images/adachi.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  position: absolute;
+  right: 1px;
+  transition: box-shadow 0.3s ease;
+}
+.descript:hover {
+  box-shadow: 0 0 20px 5px rgba(19, 3, 255, 0.842);
+}
+
+.home .over-button {
+  background-color: #9bfa98;
+  display: block;
+  width: max-content;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 13px 12px 4px rgba(76, 255, 69, 0.555);
+  position: relative;
+  top: 175px;
+}
+
+.home .butt-desc-top {
+  background-color: #d3c3c3;
+  display: block;
+  width: max-content;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 30px;
+  box-shadow: 13px 12px 4px rgba(168, 6, 155, 0.425);
+  position: relative;
+}
+
+.home .butt-desc-bott {
+  background-color: #d3c3c3;
+  display: block;
+  width: max-content;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50px;
+  box-shadow: 13px 12px 4px rgba(168, 6, 155, 0.425);
+  position: relative;
+}
+
 .icon2 {
   width: 100px;
   height: 100px;
@@ -55,9 +166,18 @@
   -webkit-text-stroke: 1px rgb(152, 102, 233);
 }
 
-.greet {
-  color: #d3c3c3;
+.home .greet {
+  color: #020000;
   font-family: 'Times New Roman', Times, serif;
+  background: rgb(158, 255, 255);
+  box-shadow: 13px 12px 20px rgba(12, 130, 160, 0.842);
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
+  padding: 5px 10px;
+  border-radius: 10px;
+  position: relative;
+  top: 5px;
 }
 
 body {
