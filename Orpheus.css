@@ -3,6 +3,260 @@
   padding: 16px;
 }
 
+<<<<<<< Updated upstream
+=======
+.dash-chart-box canvas {
+    max-height: 260px;
+}
+
+.dash-chart-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 150px;
+}
+
+.dashboard {
+  background-image: url(front_images/grey_bricks.jpg);
+  background-size: auto;
+  background-repeat: repeat;
+  width: 100%;
+  height: 250vh;
+  position: relative;
+}
+
+.dashboard .dash-greet {
+  background-color: hotpink;
+  width: max-content;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  box-shadow: 13px 12px 4px #b923e7cc;
+  top: 15px;
+}
+
+.dashboard h1 {
+  margin: 0;
+}
+
+.chart-title {
+    background-color: hotpink;
+    border-radius: 10px;
+    padding: 5px 10px;
+    width: fit-content;
+    margin: 0 auto;
+    box-shadow: 13px 12px 4px #b923e7cc;
+}
+
+.dash-cards {
+    display: flex;
+    gap: 16px;
+    padding: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.dash-card {
+    background-color: hotpink;
+    border-radius: 10px;
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    box-shadow: 13px 12px 4px #b923e7cc;
+    max-width: fit-content;
+}
+
+.dash-cards-label {
+    color: #1a1a1a;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.dash-cards-value {
+    color: #1a1a1a;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.dash-charts {
+    display: flex;
+    gap: 20px;
+    padding: 0 30px 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: px;
+}
+
+.dash-chart-box {
+    border-radius: 10px;
+    padding: 20px;
+    width: fit-content;
+}
+
+.dash-chart-box h2 {
+    color: #1a1a1a;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 14px;
+    text-align: center;
+}
+
+.dash-chart-box canvas {
+    max-height: 260px;
+}
+
+.buttones-row {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  row-gap: 20px;
+  column-gap: 10px;
+  top: 20px;
+  left: 20px;
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.user-butt {
+  position: relative;
+  width: 190px;
+  height: 80px;
+  background-color: rgb(133, 114, 255);
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.dash-butt {
+  position: relative;
+  width: 190px;
+  height: 80px;
+  background-color: rgb(133, 114, 255);
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.buttones {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 300px;
+  margin-top: 50px;
+}
+
+.Hardcore {
+  width: 300px;
+  height: 300px;
+  background-image: url('front_images/HolyShit.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  margin-top: 150px;
+}
+.Hardcore:hover {
+  box-shadow: 0 0 15px 5px rgb(255, 5, 5);
+}
+
+.Normal {
+  width: 300px;
+  height: 300px;
+  background-image: url('front_images/Normal.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  margin-top: 150px;
+}
+.Normal:hover {
+  box-shadow: 0 0 15px 5px rgb(253, 223, 52);
+}
+
+.Chill {
+  width: 300px;
+  height: 300px;
+  background-image: url('front_images/Chill.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  margin-top: 150px;
+}
+.Chill:hover {
+  box-shadow: 0 0 15px 5px rgba(6, 180, 6, 0.842);
+}
+
+.home .descript {
+  width: 120px;
+  height: 160px;
+  display: block;
+  margin-left: auto;
+  margin-right: 200px;
+  cursor: pointer;
+  background-image: url('front_images/adachi.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  position: absolute;
+  right: 1px;
+  transition: box-shadow 0.3s ease;
+}
+.descript:hover {
+  box-shadow: 0 0 20px 5px rgba(19, 3, 255, 0.842);
+}
+
+.home .over-button {
+  background-color: #9bfa98;
+  display: block;
+  width: max-content;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 13px 12px 4px rgba(76, 255, 69, 0.555);
+  position: relative;
+  top: 175px;
+}
+
+.home .butt-desc-top {
+  background-color: #d3c3c3;
+  display: block;
+  width: max-content;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 30px;
+  box-shadow: 13px 12px 4px rgba(168, 6, 155, 0.425);
+  position: relative;
+}
+
+.home .butt-desc-bott {
+  background-color: #d3c3c3;
+  display: block;
+  width: max-content;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50px;
+  box-shadow: 13px 12px 4px rgba(168, 6, 155, 0.425);
+  position: relative;
+}
+
+.icon2 {
+  width: 100px;
+  height: 100px;
+  vertical-align: middle;
+}
+
+>>>>>>> Stashed changes
 .icon {
   width: 75px;
   height: 75px;
@@ -76,6 +330,7 @@ body {
   background-repeat: repeat;
   width: 100%;
   height: 150vh;
+  position: relative;
 }
 
 .formerror {

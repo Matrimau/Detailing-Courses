@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div id="regi">
@@ -68,8 +69,61 @@
     </div>
     <div id="home" class="home" style="display: none">
         <h1 class="greet">Здравствуй <span id="Nickna"></span>!</h1>
+<<<<<<< Updated upstream
         <button class="descript" onclick="showpage('about')">Описание веб-приложения</button>
         <h1>Хочешь почитать описание веб-приложения? Жми кнопочку</h1>
+=======
+        <button class="descript" onclick="showpage('about')"></button>
+        <h1 class="butt-desc-top">Если хочешь почитать описание веб-приложения, то жми кнопку справа</h1>
+        <h1 class="butt-desc-bott">А снизу находяться кнопки перехода на нужный тебе курс</h1>
+        <h1 class="over-button">Выбери курс по своему уровню (Не выбирай нормиса или шиза если ты не готов)</h1>
+        <div class="buttones">
+            <button class="Chill"></button>
+            <button class="Normal"></button>
+            <button class="Hardcore"></button>
+        </div>
+        <div class="buttones-row">
+            <button class="user-butt">Твоя страница</button>
+            <button class="dash-butt" onclick="showpage('dashboard')">Дашборд</button>
+        </div>
+    </div>
+    <div id="dashboard" class="dashboard" style="display: none;">
+        <h1 class="dash-greet">Ты только взгляни на этот прекрасный(отвратительный лол) дашборд!</h1>
+
+        <div class="dash-cards">
+            <div class="dash-card">
+                <span class="dash-cards-label">Всего чуваков/чувих у нас</span>
+                <span class="dash-cards-value" id="statTotal"></span>
+            </div>
+            <div class="dash-card">
+                <span class="dash-cards-label">Всего шизов(выбрали шиз)</span>
+                <span class="dash-cards-value" id="statHard">-</span>
+            </div>
+            <div class="dash-card">
+                <span class="dash-cards-label">Всего нормисов(Выбрали нормис)</span>
+                <span class="dash-cards-value" id="statNorm">-</span>
+            </div>
+            <div class="dash-card">
+                <span class="dash-cards-label">Всего чилловых(выбрали чилл)</span>
+                <span class="dash-cards-value" id="statChill">-</span>
+            </div>
+        </div>
+
+        <div class="dash-charts">
+            <div class="dash-chart-wrapper">
+                <h2 class="chart-title">регистрации по месяцам</h2>
+                <div class="dash-chart-box">
+                    <canvas id="barChart"></canvas>
+                </div>
+            </div>
+            <div class="dash-chart-wrapper">
+                <h2 class="chart-title">Кто какой курс выбрал</h2>
+                <div class="dash-chart-box">
+                    <canvas id="pieChart"></canvas>
+                </div>
+            </div>
+        </div>
+>>>>>>> Stashed changes
     </div>
     <div id="about" class="about" style="display: none;">
         <h1>Здарова челик! Описание веб-приложения захотел почитать? </h1>
