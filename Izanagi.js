@@ -1,11 +1,11 @@
 function showpage(name){
-    document.getElementById('regi').style.display = 'none';
-    document.getElementById('logi').style.display = 'none';
-    document.getElementById('home').style.display = 'none';
-    document.getElementById('about').style.display = 'none';
-    document.getElementById(name).style.display = 'block';
-
+    ['regi', 'logi', 'home', 'about', 'dashboard'].forEach(id =>{
+        document.getElementById(id).style.display = "none";
+    });
+    document.getElementById(name).style.display = "block";
     window.location.hash = name;
+
+    if (name === 'dashboard') loadDashboard();
 }
 
 function seterror(id, error){
@@ -104,4 +104,85 @@ function validateLogin(){
     }
 
 return false;
+}
+
+const fallbackStats = {
+    totalUsers: 42,
+    hardcore: 5,
+    normal: 12,
+    chill: 25,
+    monthlyLabels: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн'],
+    monthlyValues: [3, 7, 5, 12, 8, 7]
+};
+
+let barChartInstance = null;
+let pieChartInstance = null;
+
+function loadDashboard() {
+    renderDashboard(fallbackStats);
+
+    const token = localStorage.getItem('token');
+    const controller = new AbortController();
+
+    setTimeout(() => controller.abort(), 3000);
+
+    fetch('http://26.96.157.124:5000/dashboard', {
+        headers: {'Authorization': 'Bearer' + token}
+    })
+    .then(res => {
+        if (!res.ok) throw new Error('Сервер не отвечает, бро');
+        return res.json();
+    })
+    .then(data => renderDashboard(data))
+    .catch(() => {
+        console.warn('Бэкенд временно недоступен, это зашлушка');
+        renderDashboard(fallbackStats);
+    })
+}
+
+function renderDashboard(data) {
+    document.getElementById('statTotal').textContent = data.totalUsers;
+    document.getElementById('statHard').textContent = data.hardcore;
+    document.getElementById('statNorm').textContent = data.normal;
+    document.getElementById('statChill').textContent = data.chill;
+
+    if (barChartInstance) barChartInstance.destroy();
+    if (pieChartInstance) pieChartInstance.destroy();
+
+    barChartInstance = new Chart(document.getElementById('barChart'), {
+        type: 'bar',
+        data: {
+            labels: data.monthlyLabels,
+            datasets: [{
+                label: 'Новые чуваки/чувихи',
+                data: data.monthlyValues,
+                backgroundColor: 'rgb(133, 114, 255)',
+                borderRadius: 6
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: { legend: { display: false }},
+            scales: {
+                y: { ticks: {color: '#fff'}, grid: {color :'rgba(255, 255, 255, 0.73)'}},
+                x: { ticks: { color: '#fff' }, grid: { color: 'rgba(255, 255, 255, 0.73)' } }
+            }
+        }
+    });
+    pieChartInstance = new Chart(document.getElementById('pieChart'), {
+        type: 'doughnut',
+        data: {
+            labels: ['Шиз', 'Нормис', 'Чилл'],
+            datasets: [{
+                data: [data.hardcore, data.normal, data.chill],
+                backgroundColor: ['#ff4d4d', '#f7a94f', '#4fcf70'],
+                borderWidth: 0
+            }]
+        },
+        options: {
+            plugins: {
+                legend: {labels: {color: '#fff', font: {size: 14}}}
+            }
+        }
+    })
 }
