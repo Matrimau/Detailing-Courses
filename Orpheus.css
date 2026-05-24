@@ -3,8 +3,6 @@
   padding: 16px;
 }
 
-<<<<<<< Updated upstream
-=======
 .dash-chart-box canvas {
     max-height: 260px;
 }
@@ -256,7 +254,6 @@
   vertical-align: middle;
 }
 
->>>>>>> Stashed changes
 .icon {
   width: 75px;
   height: 75px;
@@ -270,6 +267,8 @@
   margin-left: auto;
   margin-right: auto;
   overflow-wrap: break-word;
+  border-radius: 12px;
+  box-shadow: 7px 12px 4px rgba(172, 255, 200, 0.425);
 }
 
 .opisan {
@@ -277,20 +276,12 @@
   text-align: left;
   margin-left: 7px;
 }
+
 .opisan2 {
   font-size: 22px;
-  text-align: left;
+  text-align: center;
   margin-left: 7px;
-}
-.opisan3 {
-  font-size: 22px;
-  text-align: left;
-  margin-left: 7px;
-}
-.opisan4 {
-  font-size: 22px;
-  text-align: left;
-  margin-left: 7px;
+  margin-bottom: 1px;
 }
 
 .about {
@@ -298,7 +289,7 @@
   background-size: auto;
   background-repeat: repeat;
   width: 100%;
-  height: 100vh;
+  height: 200vh;
 }
 
 .about h1 {
