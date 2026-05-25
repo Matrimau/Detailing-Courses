@@ -1,5 +1,6 @@
 function showpage(name){
-    ['regi', 'logi', 'home', 'about', 'dashboard', 'userpage'].forEach(id =>{
+    ['regi', 'logi', 'home', 'about', 'dashboard', 'userpage', 
+        'Chill-Course', 'Norm-Course', 'Hard-Course'].forEach(id =>{
         document.getElementById(id).style.display = "none";
     });
     document.getElementById(name).style.display = "block";
