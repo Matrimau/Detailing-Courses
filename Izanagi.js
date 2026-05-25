@@ -1,13 +1,4 @@
 function showpage(name){
-<<<<<<< Updated upstream
-    document.getElementById('regi').style.display = 'none';
-    document.getElementById('logi').style.display = 'none';
-    document.getElementById('home').style.display = 'none';
-    document.getElementById('about').style.display = 'none';
-    document.getElementById(name).style.display = 'block';
-
-    window.location.hash = name;
-=======
     ['regi', 'logi', 'home', 'about', 'dashboard', 'userpage'].forEach(id =>{
         document.getElementById(id).style.display = "none";
     });
@@ -16,7 +7,6 @@ function showpage(name){
 
     if (name === 'dashboard') loadDashboard();
     if (name === 'userpage') loadUserPage();
->>>>>>> Stashed changes
 }
 
 function seterror(id, error){
@@ -117,8 +107,6 @@ function validateLogin(){
     }
 
 return false;
-<<<<<<< Updated upstream
-=======
 }
 
 const fallbackStats = {
@@ -242,5 +230,4 @@ function refreshToken() {
         }
     })
     .catch(() => alert('Сорри, не получилось обновить токен'))
->>>>>>> Stashed changes
 }
