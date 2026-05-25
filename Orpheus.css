@@ -2,6 +2,65 @@
 .container {
   padding: 16px;
 }
+
+.course-content h2 {
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.course-content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 32px;
+    margin-bottom: 12px;
+    color: #2c2c2c;
+}
+
+.course-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #444444;
+    margin-bottom: 16px;
+}
+
+.Chill-Course .course-content {
+    background-color: #f9f7f2;
+    padding: 40px;
+    border-radius: 12px;
+    border-left: 4px solid #a8c5a0;
+}
+.Chill-Course h2 { color: #4a7a58; }
+.Chill-Course h3 { color: #5a8a68; }
+
+.Norm-Course .course-content {
+    background-color: #f4f6f8;
+    padding: 40px;
+    border-radius: 8px;
+    border-left: 4px solid #cbe249;
+}
+.Norm-Course h2 { color: #eeb02b; }
+.Norm-Course h3 { color: #eeb02b; }
+
+.Hard-Course .course-content {
+    background-color: #141414;
+    padding: 40px;
+    border-radius: 8px;
+    border-left: 4px solid #cc3333;
+}
+.Hard-Course h2 { color: #e0e0e0; }
+.Hard-Course h3 { color: #cc3333; }
+.Hard-Course p  { color: #aaaaaa; }
+
+.course-content {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
 .userpage {
   background-image: url(front_images/grey_bricks.jpg);
   background-size: auto;
@@ -53,98 +112,6 @@
   border-radius: 10px;
   box-shadow: 13px 12px 4px #fffc62ef;
   top: 25px;
-}
-
-.dash-chart-box canvas {
-    max-height: 260px;
-}
-
-.dash-chart-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top: 150px;
-}
-
-.dashboard {
-  background-image: url(front_images/grey_bricks.jpg);
-  background-size: auto;
-  background-repeat: repeat;
-  width: 100%;
-  height: 250vh;
-  position: relative;
-}
-
-.dashboard .dash-greet {
-  background-color: hotpink;
-  width: max-content;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 10px;
-  box-shadow: 13px 12px 4px #b923e7cc;
-  top: 15px;
-}
-
-.dashboard h1 {
-  margin: 0;
-}
-
-.chart-title {
-    background-color: hotpink;
-    border-radius: 10px;
-    padding: 5px 10px;
-    width: fit-content;
-    margin: 0 auto;
-    box-shadow: 13px 12px 4px #b923e7cc;
-}
-
-.dash-cards {
-    display: flex;
-    gap: 16px;
-    padding: 30px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.dash-card {
-    background-color: hotpink;
-    border-radius: 10px;
-    padding: 8px 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    box-shadow: 13px 12px 4px #b923e7cc;
-    max-width: fit-content;
-}
-
-.dash-cards-label {
-    color: #1a1a1a;
-    font-size: 25px;
-    font-weight: bold;
-}
-
-.dash-cards-value {
-    color: #1a1a1a;
-    font-size: 25px;
-    font-weight: bold;
-}
-
-.dash-charts {
-    display: flex;
-    gap: 20px;
-    padding: 0 30px 30px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: px;
-}
-
-.dash-chart-box {
-    border-radius: 10px;
-    padding: 20px;
-    width: fit-content;
 }
 
 .dash-chart-box canvas {
