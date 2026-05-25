@@ -1,11 +1,12 @@
 function showpage(name){
-    ['regi', 'logi', 'home', 'about', 'dashboard'].forEach(id =>{
+    ['regi', 'logi', 'home', 'about', 'dashboard', 'userpage'].forEach(id =>{
         document.getElementById(id).style.display = "none";
     });
     document.getElementById(name).style.display = "block";
     window.location.hash = name;
 
     if (name === 'dashboard') loadDashboard();
+    if (name === 'userpage') loadUserPage();
 }
 
 function seterror(id, error){
@@ -49,6 +50,7 @@ function validateForm(){
         .then(data => {
             if(data.status === "ok"){
                 document.getElementById('Nickna').innerHTML = nick;
+                document.getElementById('UserNickna').innerHTML = nick;
                 localStorage.setItem('token', data.token)
                 showpage('home')
             } else {
@@ -90,6 +92,7 @@ function validateLogin(){
         .then(data => {
             if(data.status === 'ok'){
                 document.getElementById('Nickna').innerHTML = nick;
+                document.getElementById('UserNickna').innerHTML = nick;
                 localStorage.setItem('token', data.token)
                 showpage('home')
             }
@@ -185,4 +188,46 @@ function renderDashboard(data) {
             }
         }
     })
+}
+
+function loadUserPage() {
+    const token = localStorage.getItem('token');
+
+    if (!token) {
+        showpage('logi');
+        return;
+    }
+    fetch('http://26.96.157.124:5000/user', {
+        headers: { 'Authorization': 'Bearer ' + token }
+    })
+    .then(res => {
+        if (res.status === 401) {
+            showpage('logi');
+            throw new Error('Сорри, токен недействителен');
+        }
+        return res.json();
+    })
+    .then(data => {
+        document.getElementById('UserNickna').innerHTML = data.username;
+        document.getElementById('UserRegDate').innerHTML = data.data.created_at;
+        document.getElementById('UserCourse').innerHTML = data.course ?? 'увы не выбран';
+    })
+    .catch(err => console.error(err));
+}
+
+function refreshToken() {
+    const token = localStorage.getItem('token');
+
+    fetch('http://26.96.157.124:5000/refresh-token', {
+        method: 'POST',
+        headers: {'Authorization': 'Bearer' + token}
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.token) {
+            localStorage.setItem('token', data.tolen);
+            alert('Поздравляю, ты обновил токен');
+        }
+    })
+    .catch(() => alert('Сорри, не получилось обновить токен'))
 }

@@ -69,10 +69,8 @@
     </div>
     <div id="home" class="home" style="display: none">
         <h1 class="greet">Здравствуй <span id="Nickna"></span>!</h1>
-<<<<<<< Updated upstream
         <button class="descript" onclick="showpage('about')">Описание веб-приложения</button>
         <h1>Хочешь почитать описание веб-приложения? Жми кнопочку</h1>
-=======
         <button class="descript" onclick="showpage('about')"></button>
         <h1 class="butt-desc-top">Если хочешь почитать описание веб-приложения, то жми кнопку справа</h1>
         <h1 class="butt-desc-bott">А снизу находяться кнопки перехода на нужный тебе курс</h1>
@@ -83,6 +81,18 @@
             <button class="Hardcore"></button>
         </div>
         <div class="buttones-row">
+            <button class="user-butt" onclick="showpage('userpage')">Твоя страница</button>
+            <button class="dash-butt" onclick="showpage('dashboard')">Дашборд</button>
+        </div>
+    </div>
+    <div id="userpage" class="userpage" style="display: none;">
+        <h1 class="user-greet"><span id="UserNickna"></span>, ты попал на свою страницу. Развлекайся</h1>
+        <div class="user-info">
+            <p class="user-regDate">Зарегался ты в эту дату: <span id="userRegDate"></span></p>
+            <p class="user-Course">Выбрал ты этот курс: <span id="userCource"></span></p>
+        </div>
+        <button class="userpage-butt" onclick="refreshToken()">Можешь обновить токен</button>
+    </div>
             <button class="user-butt">Твоя страница</button>
             <button class="dash-butt" onclick="showpage('dashboard')">Дашборд</button>
         </div>
@@ -123,7 +133,6 @@
                 </div>
             </div>
         </div>
->>>>>>> Stashed changes
     </div>
     <div id="about" class="about" style="display: none;">
         <h1>Здарова челик! Описание веб-приложения захотел почитать? </h1>

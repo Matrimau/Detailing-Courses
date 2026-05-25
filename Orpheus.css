@@ -2,6 +2,150 @@
 .container {
   padding: 16px;
 }
+.userpage {
+  background-image: url(front_images/grey_bricks.jpg);
+  background-size: auto;
+  background-repeat: repeat;
+  width: 100%;
+  height: 250vh;
+  position: relative;
+}
+.user-greet {
+  background-color: rgb(82, 228, 82);
+  width: fit-content;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 13px 12px 4px #37972a7a;
+  top: 15px;
+}
+.userpage-butt {
+  position: relative;
+  width: 190px;
+  height: 90px;
+  background-color: rgb(133, 114, 255);
+  cursor: pointer;
+  font-size: 25px;
+  display: block;
+  margin: 20px auto;
+  top: 35px;
+}
+.user-regDate {
+  background-color: rgb(50, 79, 240);
+  width: fit-content;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 5 auto;
+  border-radius: 10px;
+  box-shadow: 13px 12px 4px #fffc62ef;
+  top: 25px;
+}
+.user-Course {
+  background-color: rgb(50, 79, 240);
+  width: fit-content;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 13px 12px 4px #fffc62ef;
+  top: 25px;
+}
+
+.dash-chart-box canvas {
+    max-height: 260px;
+}
+
+.dash-chart-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 150px;
+}
+
+.dashboard {
+  background-image: url(front_images/grey_bricks.jpg);
+  background-size: auto;
+  background-repeat: repeat;
+  width: 100%;
+  height: 250vh;
+  position: relative;
+}
+
+.dashboard .dash-greet {
+  background-color: hotpink;
+  width: max-content;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  box-shadow: 13px 12px 4px #b923e7cc;
+  top: 15px;
+}
+
+.dashboard h1 {
+  margin: 0;
+}
+
+.chart-title {
+    background-color: hotpink;
+    border-radius: 10px;
+    padding: 5px 10px;
+    width: fit-content;
+    margin: 0 auto;
+    box-shadow: 13px 12px 4px #b923e7cc;
+}
+
+.dash-cards {
+    display: flex;
+    gap: 16px;
+    padding: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.dash-card {
+    background-color: hotpink;
+    border-radius: 10px;
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    box-shadow: 13px 12px 4px #b923e7cc;
+    max-width: fit-content;
+}
+
+.dash-cards-label {
+    color: #1a1a1a;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.dash-cards-value {
+    color: #1a1a1a;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.dash-charts {
+    display: flex;
+    gap: 20px;
+    padding: 0 30px 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: px;
+}
+
+.dash-chart-box {
+    border-radius: 10px;
+    padding: 20px;
+    width: fit-content;
+}
 
 .dash-chart-box canvas {
     max-height: 260px;
@@ -300,9 +444,18 @@
   -webkit-text-stroke: 1px rgb(152, 102, 233);
 }
 
-.greet {
-  color: #d3c3c3;
+.home .greet {
+  color: #020000;
   font-family: 'Times New Roman', Times, serif;
+  background: rgb(158, 255, 255);
+  box-shadow: 13px 12px 20px rgba(12, 130, 160, 0.842);
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
+  padding: 5px 10px;
+  border-radius: 10px;
+  position: relative;
+  top: 5px;
 }
 
 body {
