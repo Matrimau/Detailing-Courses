@@ -7,3 +7,8 @@
 По функционалом этот проект не будет обделён. Он будет иметь различные функции, в том числе скролл страницы, возможность переходить сразу на определённый этап и кнопки которые перешлют пользователя на разные страницы в зависимости от надписи.
 
 P.s Функционал будет дополняться во время разработки
+
+| week 1 | week 2 | week 3 | week 4 | week 5 | week 6 | week 7 | week 8 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| feat: added registration form | feat: added login form | feat: connecting to backend | route registration | fix: removed swearings | feat: add dashboard |  | feat: make userpage |
+|  |  |  | route login | fix: delete unnecessary lines |  |  | feat: done courses |
