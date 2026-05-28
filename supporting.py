@@ -29,7 +29,6 @@ def analytics():
         rate = 0
         if total > 0:
             rate = round(completed / total * 100)
-
         popular = conn.execute('''
             SELECT c.title
             FROM enrollments e
@@ -38,18 +37,15 @@ def analytics():
             ORDER BY COUNT(e.id) DESC
             LIMIT 1
         ''').fetchone()
-
         courses_stat = conn.execute('''
             SELECT c.title, c.duration_hours, COUNT(e.id) as students_count
             FROM courses c
             LEFT JOIN enrollments e ON c.id = e.course_id
             GROUP BY c.id
         ''').fetchall()
-
         courses_data = []
         for r in courses_stat:
             courses_data.append(dict(r))
-
         return {
             'avg_duration': round(avg_dur) if avg_dur else 0,
             'total_enrollments': total,
@@ -103,11 +99,9 @@ def report():
             FROM enrollments
             GROUP BY status
         ''').fetchall()
-
         status_data = {}
         for r in statuses:
             status_data[r['status']] = r['cnt']
-
         return {
             'total_students': total_students,
             'total_courses': total_courses,
