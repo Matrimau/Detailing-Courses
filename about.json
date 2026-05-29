@@ -1,0 +1,10 @@
+{
+  "project": "Courses Detailing",
+  "description": "Платформа курсов по детейлингу автомобилей",
+  "version": "1.0",
+  "team": {
+    "Frontend": "Mihail",
+    "Backend": "Vlad",
+    "Databases": "Ania"
+  }
+}
